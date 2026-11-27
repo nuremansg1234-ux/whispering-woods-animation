@@ -1,5 +1,5 @@
 import numpy as np
-import scipy.io import wavfile
+from scipy.io import wavfile
 from gtts import gTTS
 from moviepy import VideoFileClip, AudioFileClip, CompositeAudioClip
 
