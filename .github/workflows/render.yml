@@ -12,12 +12,15 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libcairo2-dev libpango1.0-dev ffmpeg fonts-thai-tlwg
-          pip install manim
+          pip install manim edge-tts moviepy
       - name: Render Video
         run: manim -ql scene1.py WhisperingWoodsScene1
+      - name: Add Voiceover
+        run: python add_audio.py
       - name: Upload Video
         uses: actions/upload-artifact@v4
         with:
-          name: scene1-video
-          path: media/videos/**/*.mp4
+          name: scene1-with-audio
+          path: final_scene1.mp4
+          
           
