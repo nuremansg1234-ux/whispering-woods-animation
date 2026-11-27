@@ -6,14 +6,12 @@ on:
 jobs:
   render:
     runs-on: ubuntu-latest
+    container:
+      image: manimcommunity/manim:stable
     steps:
       - uses: actions/checkout@v4
-      - name: Render Manim Video
-        uses: ManimCommunity/manim-action@v3
-        with:
-          script: scene1.py
-          scene: WhisperingWoodsScene1
-          quality: l
+      - name: Render Video
+        run: manim -ql scene1.py WhisperingWoodsScene1
       - name: Upload Video
         uses: actions/upload-artifact@v4
         with:
