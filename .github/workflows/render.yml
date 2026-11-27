@@ -12,7 +12,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libcairo2-dev libpango1.0-dev ffmpeg fonts-thai-tlwg
-          pip install manim edge-tts moviepy
+          pip install manim gTTS moviepy
+          
+                    
       - name: Render Video
         run: manim -ql scene1.py WhisperingWoodsScene1
       - name: Add Voiceover
