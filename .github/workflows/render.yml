@@ -1,0 +1,22 @@
+name: Render Animation
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render Manim Video
+        uses: ManimCommunity/manim-action@v3
+        with:
+          script: scene1.py
+          scene: WhisperingWoodsScene1
+          quality: l
+      - name: Upload Video
+        uses: actions/upload-artifact@v4
+        with:
+          name: scene1-video
+          path: media/videos/**/*.mp4
+          
