@@ -1,4 +1,4 @@
- from manim import *
+from manim import *
 
 class WhisperingWoodsScene1(Scene):
     def construct(self):
