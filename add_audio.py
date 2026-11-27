@@ -14,7 +14,7 @@ tts = gTTS(text=text, lang="th", slow=False)
 tts.save("voice.mp3")
 
 # 2. โหลดวิดีโอแนวตั้ง 9:16
-video = VideoFileClip("media/videos/scene1/1280p15/WhisperingWoodsScene1.mp4")
+video = VideoFileClip("media/videos/scene1/1280p30/WhisperingWoodsScene1.mp4")
 duration = video.duration
 
 # 3. สร้างดนตรีประกอบโทนลึกลับ/ระทึกขวัญ (Minor / Diminished)
