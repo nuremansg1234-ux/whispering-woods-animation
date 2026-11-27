@@ -1,4 +1,4 @@
-fromrtrt manim import *
+from manim import *
 import random
 
 class WhisperingWoodsScene1(Scene):
